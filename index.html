@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+var coordinateX= 3;
+var coordinateY = 5;
+
+const coordinates = {
+  1:{
+    x:3,y:5
+  },
+  2:{
+    x:-3,y:5
+  },
+  3:{
+    x:3,y:-5
+  },
+  4:{
+    x:-3,y:-5
+  }
+}
+
+for (let i in coordinates) {
+  let coordinate = coordinates[i];
+  let x = coordinate.x;
+  let y = coordinate.y;
+  
+  if (x === coordinateX && y === coordinateY) {
+    console.log(i , true , x , y);
+  } else {
+    console.log(i, false , x , y);
+  }
+}
+
+
+</script>
+
+</body>
+</html>
