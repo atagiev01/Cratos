@@ -33,10 +33,12 @@ for (let i in coordinates) {
   let y = coordinate.y;
   
   if (x === coordinateX && y === coordinateY) {
-    console.log(i , true , x , y);
+
+    document.write('<span style="color: green;">' , i + ' doğru olan rüb : ' + x + ' ' + y + '</span><br><br>');
   } else {
-    console.log(i, false , x , y);
-  }
+    document.write('<span style="color: red;">' , i + ' səhv olan rüb : ' + x + ' ' + y + '</span><br><br>');
+  } 
+
 }
 
 
