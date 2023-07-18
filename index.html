@@ -12,6 +12,7 @@
 var coordinateX= 3;
 var coordinateY = 5;
 
+
 const coordinates = {
   1:{
     x:3,y:5
@@ -27,20 +28,30 @@ const coordinates = {
   }
 }
 
+
 for (let i in coordinates) {
   let coordinate = coordinates[i];
   let x = coordinate.x;
   let y = coordinate.y;
   
   if (x === coordinateX && y === coordinateY) {
-
-    document.write('<span style="color: green;">' , i + ' doğru olan rüb : ' + x + ' ' + y + '</span><br><br>');
+    document.write('<span style="color: green;">' , i + ' rüb (doğrudur) : ' + x + ' ' + y + '</span><br><br>');
   } else {
-    document.write('<span style="color: red;">' , i + ' səhv olan rüb : ' + x + ' ' + y + '</span><br><br>');
+    document.write('<span style="color: red;">' , i + ' rüb (səhvdir) : ' + x + ' ' + y + '</span><br><br>');
   } 
 
 }
 
+
+if (coordinateX > 0 && coordinateY > 0) {
+  console.log("Seçilmiş koordinat 1. rübdədir.");
+} else if (coordinateX < 0 && coordinateY > 0) {
+  console.log("Seçilmiş koordinat 2. rübdədir.");
+} else if (coordinateX < 0 && coordinateY < 0) {
+  console.log("Seçilmiş koordinat 3. rübdədir.");
+} else if (coordinateX > 0 && coordinateY < 0) {
+  console.log("Seçilmiş koordinat 4. rübdədir.");
+}
 
 </script>
 
