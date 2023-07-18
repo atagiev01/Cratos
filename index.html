@@ -7,8 +7,15 @@
 </head>
 <body>
 
+  <p id="number">0</p>
 
+  <button onclick="artir()">+</button>
+  <button onclick="azalt()">-</button>
+<br>
 <script>
+
+
+
 var coordinateX= 3;
 var coordinateY = 5;
 
@@ -43,6 +50,9 @@ for (let i in coordinates) {
 }
 
 
+
+
+
 if (coordinateX > 0 && coordinateY > 0) {
   console.log("Seçilmiş koordinat 1. rübdədir.");
 } else if (coordinateX < 0 && coordinateY > 0) {
@@ -53,7 +63,25 @@ if (coordinateX > 0 && coordinateY > 0) {
   console.log("Seçilmiş koordinat 4. rübdədir.");
 }
 
+let number = 0;
+
+function artir() {
+  number++;
+  document.getElementById("number").textContent = number;
+}
+
+function azalt() {
+  number--;
+  document.getElementById("number").textContent = number;
+}
+
+
 </script>
+
+
+
+
+
 
 </body>
 </html>
