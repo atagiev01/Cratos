@@ -4,84 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
 </head>
+
 <body>
+<!-- 
+<section>
+  <div class= "formstyle">
+    <form name = "form1">
+      
+  <input id = "calc" type ="text" name = "answer">
 
-  <p id="number">0</p>
+<div class="grid-container">
 
-  <button onclick="artir()">+</button>
-  <button onclick="azalt()">-</button>
-<br>
+  <input class="call" type = "button" value = "1" onclick = "form1.answer.value += '1' ">
+  <input  class="call"  type = "button" value = "2" onclick = "form1.answer.value += '2' ">
+  <input  class="call"  type = "button" value = "3" onclick = "form1.answer.value += '3' ">
+   <input  class="call"  type = "button" value = "+" onclick = "form1.answer.value += '+' ">
+  
+  <input  class="call"  type = "button" value = "4" onclick = "form1.answer.value += '4' ">
+  <input  class="call"  type = "button" value = "5" onclick = "form1.answer.value += '5' ">
+  <input  class="call"  type = "button" value = "6" onclick = "form1.answer.value += '6' ">
+  <input  class="call"  type = "button" value = "-" onclick = "form1.answer.value += '-' ">
+  
+  <input  class="call"  type = "button" value = "7" onclick = "form1.answer.value += '7' ">
+  <input  class="call"  type = "button" value = "8" onclick = "form1.answer.value += '8' ">
+  <input  class="call"  type = "button" value = "9" onclick = "form1.answer.value += '9' ">
+  <input  class="call"  type = "button" value = "*" onclick = "form1.answer.value += '*' ">
+  
+  <input  class="call"  type = "button" value = "/" onclick = "form1.answer.value += '/' ">
+  <input  class="call"  type = "button" value = "0" onclick = "form1.answer.value += '0' ">
+    <input  class="call"  type = "button" value = "." onclick = "form1.answer.value += '.' ">
+  <input  class="call"  type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">
+  
+</div>
+  <input class="a" type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >
+   
+    </form>
+    </div>
+
+
+
+
+
+</section> -->
+
+
+
+
+<div>
+
+  <button onclick="pluse()">+</button>
+  <input id="number" type="number" placeholder="number" value="0">
+  <button onclick="minus()">-</button>
+
+</div>
+
+<button onclick="dw()"> dark </button>
+
+
+<p id="result"></p>
 <script>
+//   for (let i = 1; i <= 5; i++) {
+//     console.log(i);
+// }
+function dw(){
+  let body =  document.querySelector("body")
 
-
-
-var coordinateX= 3;
-var coordinateY = 5;
-
-
-const coordinates = {
-  1:{
-    x:3,y:5
-  },
-  2:{
-    x:-3,y:5
-  },
-  3:{
-    x:3,y:-5
-  },
-  4:{
-    x:-3,y:-5
+  if(body.style.background === "white" || body.style.background === ""){
+ body.style.background ="black"
+    
+  }else{
+    body.style.background = "white"
   }
 }
 
 
-for (let i in coordinates) {
-  let coordinate = coordinates[i];
-  let x = coordinate.x;
-  let y = coordinate.y;
-  
-  if (x === coordinateX && y === coordinateY) {
-    document.write('<span style="color: green;">' , i + ' rüb (doğrudur) : ' + x + ' ' + y + '</span><br><br>');
-  } else {
-    document.write('<span style="color: red;">' , i + ' rüb (səhvdir) : ' + x + ' ' + y + '</span><br><br>');
-  } 
 
-}
+// let num = document.getElementById("number");
+// let currentValue = parseInt(num.value);
 
+// var x= 10
+// function pluse(){
+//   if(currentValue < x){
+//     currentValue++;
+//   num.value =  currentValue
+//   }
+// }
 
+// function minus(){
+//   if(currentValue > -x){
+//     currentValue--;
+//   num.value =  currentValue
+//   }
+// }
 
-
-
-if (coordinateX > 0 && coordinateY > 0) {
-  console.log("Seçilmiş koordinat 1. rübdədir.");
-} else if (coordinateX < 0 && coordinateY > 0) {
-  console.log("Seçilmiş koordinat 2. rübdədir.");
-} else if (coordinateX < 0 && coordinateY < 0) {
-  console.log("Seçilmiş koordinat 3. rübdədir.");
-} else if (coordinateX > 0 && coordinateY < 0) {
-  console.log("Seçilmiş koordinat 4. rübdədir.");
-}
-
-let number = 0;
-
-function artir() {
-  number++;
-  document.getElementById("number").textContent = number;
-}
-
-function azalt() {
-  number--;
-  document.getElementById("number").textContent = number;
-}
 
 
 </script>
 
-
-
-
-
-
+<script src="/main.js"></script>
 </body>
 </html>
